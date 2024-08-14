@@ -1,0 +1,39 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<%
+		String name = (String) session.getAttribute("name");
+		String address = (String) session.getAttribute("address");
+		String email = (String) session.getAttribute("email");
+		
+		//StringBuffer 객체 생성
+		StringBuffer buffer = new StringBuffer();
+		
+		//StringBuffer에 값을 추가
+		if(name != null){
+			buffer.append("Name: ").append(name).append("<br>");
+		}
+		if(address != null){
+			buffer.append("Name: ").append(address).append("<br>");
+		}
+		if(email != null){
+			buffer.append("Name: ").append(email).append("<br>");
+		}
+		
+		//출력
+		out.println(buffer.toString());
+		
+		
+		
+	%>
+		
+		
+
+</body>
+</html>
